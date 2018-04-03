@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokedexWebApiReact", "PokedexWebApiReact\PokedexWebApiReact.csproj", "{16572420-93C3-41CF-8C1A-4B16943374CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16572420-93C3-41CF-8C1A-4B16943374CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16572420-93C3-41CF-8C1A-4B16943374CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16572420-93C3-41CF-8C1A-4B16943374CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16572420-93C3-41CF-8C1A-4B16943374CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BC19E60-6E31-45E8-A8E5-6D3A26BB6B72}
+	EndGlobalSection
+EndGlobal
