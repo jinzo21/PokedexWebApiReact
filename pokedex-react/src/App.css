@@ -1,28 +1,340 @@
-.App {
+.backgroundImg{
+  background-image:url('./images/pokemonWallpaper.png');
+  border: 20px solid red;
+  min-height:100%;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+  font-size: 10px;
+  -webkit-font-smoothing: none;
+  font-family: 'pokemon-font', monospace;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h1 {
+  font-size: 35px;
 }
 
-.App-title {
-  font-size: 1.5em;
+h2 {
+  font-size: 30px;
+  color:#F2CB05;
 }
 
-.App-intro {
-  font-size: large;
+h3 {
+  font-size: 25px;
+  color:white;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 15px;
+  color:white;
+}
+
+.pokedexLogo{
+  background-image:url('./images/Pokedex_logo.png');
+  min-height:100%;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+input {
+  position: relative;
+
+  display: inline-block;
+  font-size: 18px;
+  box-sizing: border-box;
+  transition: 3s;
+}
+
+.inputPosition {
+  top: 85px;
+  right: 16px;
+}
+
+input[type=text] {
+  background: #F2F2F2;
+  border:4px solid #3F61A6;
+  border-radius: 25px 0 0 25px;
+  height: 40px;
+  margin:8px 0;
+  outline: none;
+  padding: 0 25px;
+  width: 140px;
+  transition:1s;
+}
+
+input[type=text]:focus{
+  border-color:#ee1515;
+  box-shadow:0 0 20px 0 #BF9004;
+}
+
+input[type=submit] { 
+  position: relative;
+  border-radius: 0 25px 25px 0;
+  width: 40px;
+  height: 40px;
+  background:#F2CB05;
+  border:4px solid #3F61A6;
+  color:black;
+}
+
+input[type=submit]:hover { 
+  background:#BF9004;
+}
+
+.pokedexBack {
+  background-color:white;
+  height: 100%;
+}
+
+.pokedexDescription {
+  min-height: 300px;
+  border-radius: 15px 50px;
+  background: white;
+  padding: 20px; 
+}
+
+.pokedexDescriptionTwo {
+  background:#3F61A6;
+  min-height: 260px;
+  border-radius: 12px 45px;
+  padding: 20px;
+  color:white;
+  text-align: left;
+}
+
+.pokedexImg {
+  min-height: 300px;
+  border-radius: 50px 15px;
+  background:white;
+  padding: 20px; 
+}
+
+.pokedexImgTwo {
+  min-height: 200px;
+  border-radius: 40px 7px;
+  background:#3F61A6;
+  padding: 20px; 
+  color:#F2CB05;
+  text-align: left;
+}
+
+.pokedexImgThree {
+  min-height: 200px;
+  border-radius: 20px 3px;
+  background:white;
+  padding: 20px; 
+  border:solid 4px	#ee1515;
+  opacity: .8;
+}
+
+
+
+.pokedexStats {
+  min-height: 300px;
+  border-radius: 50px 15px;
+  background:white;
+  padding: 20px;   
+}
+
+.pokedexStatsTwo {
+  min-height: 240px;
+  border-radius: 43px 11px;
+  background:#3F61A6;
+  padding: 20px;   
+  color:white;
+  text-align: left;
+}
+
+.showcase{
+  background-image:url('./images/pokemonWallpaper.png');
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:0 20px;
+}
+
+.container-skill{
+  margin-bottom:15px;
+  width: 430px;
+  background-color: #FFFFFF;
+  border:solid 3px 	#008080;
+  border-radius:3px;
+ }
+
+.skill-name{
+  position: relative;
+  margin-bottom:8px;
+  margin-left:3px;
+ }
+
+.skill-group-bar{
+  margin-left:50px;
+  position: relative;
+  display:inline;
+  border-radius:3px;
+  border:solid 3px 	#008080;
+  background-color: #FFFFFF;
+  width: 1000px;
+  height: 20px;
+  padding:3px;
+ }
+
+.skill-bar {
+  display:inline;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  padding-left:30px;
+  margin:0px 1px 0 1px; 
+  border-radius:2px;
+}
+
+.skill-bar#active{
+  background-color: #008080;
+}
+
+.skill-bar#disable{
+  background-color: #f1f1f1;
+}
+
+.center-on-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+/* Poké Styles */
+.pokeball {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border: 10px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: inset -10px 10px 0 10px #ccc;
+  animation: fall .5s ease-in-out,
+             shake 1.5s cubic-bezier(.36,.07,.19,.97) 3;
+}
+.pokeball::before,
+.pokeball::after {
+  content:"";
+  position: absolute;
+}
+.pokeball::before {
+  background: red;
+  width: 100%;
+  height: 50%;
+}
+.pokeball::after {
+  top: calc(50% - 10px);
+  width: 100%;
+  height: 20px;
+  background: #000;
+}
+.pokeball__button {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  background: #7f8c8d;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 0 10px black;
+  animation: blink .5s alternate 7;
+}
+/* Animation */
+@keyframes blink {
+  from { background: #eee;}
+  to { background: #e74c3c; }
+}
+@keyframes shake {
+  0 { transform: translate(0, 0) rotate(0); }
+  20% { transform: translate(-10px, 0) rotate(-20deg); }
+  30% { transform: translate(10px, 0) rotate(20deg); }
+  50% { transform: translate(-10px, 0) rotate(-10deg); }
+  60% { transform: translate(10px, 0) rotate(10deg); }
+  100% { transform: translate(0, 0) rotate(0); }
+}
+@keyframes fall {
+  0% { top: -200px }
+  60% { top: 0 }
+  80% { top: -20px }
+  100% { top: 0 }
+}
+
+.newShape {
+  clip-path: polygon(30% 38%, 70% 38%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.skillsContainer {
+    width: 80%;
+    background-color: White;
+}
+
+.skills {
+    text-align: right;
+    padding-right: 20px; 
+    line-height: 40px;
+    color: #000000 white;
+}
+
+.hp {background-color: #ee1515; border: 2px solid white;}
+.attack {background-color: #ee1515; border: 2px solid white;}
+.spAttack {background-color: #ee1515; border: 2px solid white;}
+.defense {background-color: #ee1515; border: 2px solid white;}
+.spDefense {background-color: #ee1515; border: 2px solid white;}
+.speed {background-color: #ee1515; border: 2px solid white;}
+.total {color: #F2CB05}
+
+.statSpacing {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pokePsychic{
+  background-image:url('./images/pokeIce.png');
+  width: 25%;
+  height: 25%;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #ee1515;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-right:30px solid #ee1515; 
 }

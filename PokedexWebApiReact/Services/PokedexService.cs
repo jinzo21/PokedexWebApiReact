@@ -214,6 +214,7 @@ namespace PokedexWebApiReact.Services
             }
         }
 
+        //Using Wrapper
         public List<Pokemon> GetAllWrap()
         {
             var results = new List<Pokemon>();
