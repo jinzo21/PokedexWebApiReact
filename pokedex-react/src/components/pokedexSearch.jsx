@@ -22,7 +22,7 @@ class pokedexSearch extends Component {
         pokemonStatSpDefense: "",
         pokemonStatSpeed: "",
         pokemonStatTotal: "",
-        pokemonDescription: "",
+        pokemonDescription: ""
     }
 
     handlePokedexSearch = (e) => {
@@ -31,7 +31,6 @@ class pokedexSearch extends Component {
 
     getPokemonData = () => {
         const pokemonName = this.state.pokedexSearchName;
-        console.log("searched pokemon: " + pokemonName);
 
         PokedexService.getByName(pokemonName)
             .then(

@@ -30,6 +30,32 @@ class pokedexData extends Component {
         this.setState({ isLoading: false })
     }
 
+    handlePokedexData = (datafromSearch) => {
+        let pokemon = datafromSearch;
+        this.setState(
+            {
+                pokemonName: pokemon.pokemonName,
+                pokemonImg: pokemon.pokemonImg,
+                pokemonImgFront: pokemon.pokemonImgFront,
+                pokemonImgBack: pokemon.pokemonImgBack,
+                pokemonTypes: pokemon.pokemonTypes,
+                pokemonStats: pokemon.pokemonStats,
+                pokemonHeight: pokemon.pokemonHeight,
+                pokemonWeight: pokemon.pokemonWeight,
+                pokemonId: pokemon.pokemonId,
+                pokemonStatAttack: pokemon.pokemonStatAttack,
+                pokemonStatDefense: pokemon.pokemonStatDefense,
+                pokemonStatHp: pokemon.pokemonStatHp,
+                pokemonStatSpAttack: pokemon.pokemonStatSpAttack,
+                pokemonStatSpDefense: pokemon.pokemonStatSpDefense,
+                pokemonStatSpeed: pokemon.pokemonStatSpeed,
+                pokemonStatTotal: pokemon.pokemonStatTotal,
+                pokemonDescription: pokemon.pokemonDescription,
+                isLoading: true
+            }
+        );
+    }
+
     //UPDATE State on new data coming in from props (of parent)
     componentWillMount() {
         let pokemon = this.props.callbackFromResponse.dataFromResponse;
@@ -74,7 +100,7 @@ class pokedexData extends Component {
                         <div className="show-grid">
                             <div xs={12} md={12} className="pokedexImg">
                                 <div className="pokedexImgTwo">
-                                    <Image img={this.state.pokemonImg} name={this.state.pokemonName} id={this.state.pokemonId} description={this.state.pokemonDescription} />
+                                    <Image img={this.state.pokemonImg} name={this.state.pokemonName} id={this.state.pokemonId} description={this.state.pokemonDescription} callbackFromData={this.handlePokedexData}/>
                                 </div>
                             </div>
                         </div>

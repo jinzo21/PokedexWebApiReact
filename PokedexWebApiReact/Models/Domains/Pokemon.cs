@@ -7,6 +7,7 @@ namespace PokedexWebApiReact.Models.Domains
 {
     public class Pokemon
     {
+
         public int Id { get; set; }
         public string PokemonId { get; set; }
         public string PokemonName { get; set; }

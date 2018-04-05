@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PokedexSearch from './pokedexSearch';
 import PokedexData from './pokedexData';
 
-
 class pokedex extends Component {
     state = {
         dataFromResponse: null,
@@ -10,7 +9,7 @@ class pokedex extends Component {
 
     //Takes in Data from Child and puts into State
     handlePokedexData = (dataFromChild) => {
-        this.setState({ dataFromResponse: dataFromChild });
+        this.setState({ dataFromResponse: dataFromChild })
     }
 
     render() {
@@ -23,7 +22,6 @@ class pokedex extends Component {
         } else {
             return (
                 <div className="App">
-                    debugger
                     <PokedexData callbackFromResponse={this.state} />
                 </div>
             )

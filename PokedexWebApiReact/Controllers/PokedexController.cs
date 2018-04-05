@@ -54,7 +54,7 @@ namespace PokedexWebApiReact.Controllers
         {
             Pokemon pokemon = pokedexService.GetByName(pokemonName);
 
-            if (pokemon == null)
+            if (pokemonName == null)
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Invalid Pokemon Name");
             }
