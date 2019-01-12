@@ -40,12 +40,14 @@ namespace PokedexWebApiReact.Controllers
         {
             List<Pokemon> pokemon = pokedexService.GetAllWrap();
 
-            if (pokemon == null)
+            if (!ModelState.IsValid)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "No Pokemon Found");
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, ModelState);
+
             }
 
             return Request.CreateResponse(HttpStatusCode.OK, pokemon);
+
         }
 
         //GetByName
@@ -54,12 +56,13 @@ namespace PokedexWebApiReact.Controllers
         {
             Pokemon pokemon = pokedexService.GetByName(pokemonName);
 
-            if (pokemonName == null)
+            if (!ModelState.IsValid)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Invalid Pokemon Name");
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
             }
 
             return Request.CreateResponse(HttpStatusCode.OK, pokemon);
+
         }
     }
 }
