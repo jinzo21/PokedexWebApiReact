@@ -3,6 +3,9 @@ using PokedexWebApiReact.Models.Domains;
 
 namespace PokedexWebApiReact.Services
 {
+	/// <summary>
+	/// IPokedex interface used for dependency injection
+	/// </summary>
     public interface IPokedexService
     {
         List<Pokemon> GetAll();
